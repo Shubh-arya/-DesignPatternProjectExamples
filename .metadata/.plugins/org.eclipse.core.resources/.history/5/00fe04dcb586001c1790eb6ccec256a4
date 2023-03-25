@@ -1,0 +1,36 @@
+package data_strucuture_and_algorithms.binarysearch;
+
+/**
+ * Ceiling is the smallest number which is either equals or greater than the
+ * given number.
+ * 
+ * @author sarya
+ *
+ */
+public class Ceiling {
+	public static void main(String[] args) {
+		int[] arr = { 2, 3, 5, 9, 14, 16, 18 };
+		int target = 15;
+		int ans = ceiling(arr, target);
+		System.out.println(ans);
+	}
+
+	private static int ceiling(int[] arr, int target) {
+		int startIndex = 0;
+		int endIndex = arr.length - 1;
+
+		while (startIndex <= endIndex) {
+			int midIndex = startIndex + (endIndex - startIndex) / 2;
+			int midElement = arr[midIndex];
+			if (target > midElement) {
+				startIndex = midIndex + 1;
+			} else if (target < midElement) {
+				endIndex = midIndex - 1;
+			} else {
+				return midElement;
+			}
+		}
+		return arr[startIndex];
+	}
+
+}

@@ -1,0 +1,41 @@
+package data_strucuture_and_algorithms.sort;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class FindTheDuplicateNumbers {
+	public static void main(String[] args) {
+		int[] arr = { 1,3,4,2,1};
+		System.out.println(Arrays.toString(cyclicSort(arr)));
+		System.out.println(findMissingNumber(arr));
+	}
+
+	private static int findMissingNumber(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] != i + 1) {
+				return arr[i];
+			}
+		}
+		return -1;
+	}
+
+	private static int[] cyclicSort(int[] arr) {
+		int index = 0;
+		while (index < arr.length) {
+			int correct = arr[index] - 1;
+			if (arr[index] != arr[correct]) {
+				swap(arr, index, correct);
+			} else {
+				index++;
+			}
+		}
+		return arr;
+	}
+
+	private static void swap(int[] arr, int source, int target) {
+		int tmp = arr[source];
+		arr[source] = arr[target];
+		arr[target] = tmp;
+	}
+}

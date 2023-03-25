@@ -1,0 +1,4 @@
+1642797100467	Rename type 'BalancedString'
+1642797730958	Extract local variable 'lastIndex'
+1642799081886	Extract local variable 'openIndex'
+1642799094432	Extract local variable 'closeIndex'

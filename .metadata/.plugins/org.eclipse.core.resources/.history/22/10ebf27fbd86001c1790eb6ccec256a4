@@ -1,0 +1,7 @@
+package data_strucuture_and_algorithms.binarysearch;
+
+public class PeakIndexInMaountainArray {
+	public static void main(String[] args) {
+		int[] mArray = {1,2,3,5,6,4,2,1};
+	}
+}

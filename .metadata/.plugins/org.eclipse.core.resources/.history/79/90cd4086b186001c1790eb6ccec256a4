@@ -1,0 +1,29 @@
+package data_strucuture_and_algorithms.binarysearch;
+
+public class BinarySearch {
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 4, 6, 7, 8, 9 };
+		int target = 2;
+		int indexFound = search(arr, target);
+	}
+
+	private static int search(int[] arr, int target) {
+		int startIndex = 0;
+		int endIndex = arr.length - 1;
+		
+		while (startIndex < endIndex) {
+			int midIndex = startIndex + (endIndex - startIndex) / 2;
+			int midElement = arr[midIndex]
+			if (target == midElement) {
+				return midIndex;
+			} else if( target > midElement) {
+				startIndex = midIndex + 1;
+			} else if (target < midElement){
+				endIndex = midIndex -1;
+			}
+		}
+
+		return -1;
+	}
+
+}

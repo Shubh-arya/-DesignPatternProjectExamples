@@ -1,0 +1,12 @@
+package stack_examples;
+
+import java.util.Scanner;
+
+public class PostFixEvalutor {
+	public static evalute() {
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()) {
+			
+		}
+	
+}

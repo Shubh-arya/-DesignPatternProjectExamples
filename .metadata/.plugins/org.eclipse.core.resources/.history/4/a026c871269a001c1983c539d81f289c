@@ -1,0 +1,52 @@
+package data_strucuture_and_algorithms.linearsearch;
+
+/**
+ * https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+ * 
+ * @author sarya
+ *
+ */
+public class EvenNoOfDigits {
+	public static void main(String[] args) {
+		int[] arr = { 12, 345, 2, 6, 7896 };
+		System.out.println("result : " + evenDigits(arr));
+	}
+
+	private static int evenDigits(int[] arr) {
+		int result = 0;
+		for (int num : arr) {
+			if (isEvenNoOfDigits2(num)) {
+				result++;
+			}
+		}
+		return result;
+	}
+
+	private static boolean isEvenNoOfDigits(int num) {
+		if (num < 0) {
+			num = num * -1;
+		}
+
+		if (num == 0) {
+			return false;
+		}
+
+		int noOfDigits = 0;
+		while (num > 0) {
+			num = num / 10;
+			noOfDigits++;
+		}
+		return noOfDigits % 2 == 0;
+	}
+
+	private static boolean isEvenNoOfDigits2(int num) {
+		return digits(num) % 2 == 0;
+	}
+
+	private static int digits(int num) {
+		if (num < 0) {
+			num = num * -1;
+		}
+		return (int) (Math.log10(num)) + 1;
+	}
+}

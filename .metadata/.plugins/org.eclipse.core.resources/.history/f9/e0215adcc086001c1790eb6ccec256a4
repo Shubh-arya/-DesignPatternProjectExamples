@@ -1,0 +1,23 @@
+package data_strucuture_and_algorithms.binarysearch;
+/**
+ * Steps:
+ * 1. Find the peak index.
+ * 2. try to find in the first half for asc array.
+ * 3. If not found, try to find in the second half of the array in desc order.
+ * @author sarya
+ *
+ */
+public class SearchInMountainArray {
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5,6,4,2,1};
+		int target = 4;
+		int targetIndex = searchMountainArray();
+		System.out.println(targetIndex);
+	}
+
+	private static int searchMountainArray() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

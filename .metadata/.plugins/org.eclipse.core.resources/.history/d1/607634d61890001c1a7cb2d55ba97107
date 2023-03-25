@@ -1,0 +1,26 @@
+package data_strucuture_and_algorithms.sort;
+
+import java.util.Arrays;
+
+public class FindMissingNumberFromNNumbers {
+
+	public static void main(String[] args) {
+		int[] arr = { 4, 5, 3, 1, 0 };
+		System.out.println(Arrays.toString(cyclicSort(arr)));
+	}
+
+	private static int[] cyclicSort(int[] arr) {
+		int index = 0;
+		while (index < arr.length) {
+			// index == value -1, then
+			if (arr[index] != arr.length && arr[index] != index) {
+				int tmp = arr[index];
+				arr[index] = arr[tmp];
+				arr[tmp] = tmp;
+			} else {
+				index++;
+			}
+		}
+		return arr;
+	}
+}

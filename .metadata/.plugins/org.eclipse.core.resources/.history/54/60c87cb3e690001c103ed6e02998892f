@@ -1,0 +1,7 @@
+package practice;
+
+public class IsEven {
+	public static void main(String[] args) {
+
+	}
+}

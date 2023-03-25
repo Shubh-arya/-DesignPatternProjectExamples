@@ -1,0 +1,8 @@
+package data_strucuture_and_algorithms.sort;
+
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		
+	}
+}

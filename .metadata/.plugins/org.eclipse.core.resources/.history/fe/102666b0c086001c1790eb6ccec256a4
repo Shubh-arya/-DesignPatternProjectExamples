@@ -1,0 +1,13 @@
+package data_strucuture_and_algorithms.binarysearch;
+/**
+ * Steps:
+ * 1. Find the peak index.
+ * 2. try to find in the first half for asc array.
+ * 3. If not found, try to find in the second half of the array in desc order.
+ * @author sarya
+ *
+ */
+public class SearchInMountainArray {
+	
+
+}

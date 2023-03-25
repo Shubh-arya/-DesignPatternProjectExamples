@@ -1,0 +1,18 @@
+package stack_examples;
+
+import java.util.Scanner;
+
+public class PostFixEvalutor {
+
+	public static int evalute(String expression) {
+		Scanner sc = new Scanner(expression);
+		while (sc.hasNext()) {
+			if(sc.hasNextInt()) {
+				
+			} else {
+				
+			}
+		}
+		return 0;
+	}
+}

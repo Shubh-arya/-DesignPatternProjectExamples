@@ -1,0 +1,29 @@
+package practice;
+
+/**
+ * Concept: In the binary world, true and true always become try but true or
+ * false become false. but yet again if the true false and true become false and
+ * we get the value greater than 1. therefor no uniqueness.
+ * 
+ * @author sarya
+ *
+ */
+public class OptimizedUniqueCharInString {
+
+	public static void main(String[] args) {
+		System.out.println("status of string uniqueness:" + hasUniqueChars2("11"));
+	}
+
+	static boolean  hasUniqueChars2(String str) {
+        if (str == null || str.isEmpty()) return false;
+        if (str.length() > 256) return false;
+
+        int bitVector = 0;
+        for (int i = 0; i < str.length(); ++i) {
+            char ch = str.charAt(i);
+            if ((bitVector & (1 << ch)) > 0) return false;
+            else bitVector |= (1 << ch);
+        }
+        return true;
+    }
+}

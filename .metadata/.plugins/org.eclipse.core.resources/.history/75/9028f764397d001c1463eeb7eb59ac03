@@ -1,0 +1,22 @@
+package stack_examples;
+
+import java.util.Scanner;
+
+import data_strucuture_and_algorithms.stack.ArrayBoundStack;
+import data_strucuture_and_algorithms.stack.StackInterface;
+
+public class PostFixEvalutor {
+
+	public static int evalute(String expression) {
+		Scanner sc = new Scanner(expression);
+		StackInterface<Integer> stack = new ArrayBoundStack<Integer>(50);
+		while (sc.hasNext()) {
+			if (sc.hasNextInt()) {
+				stack.push(sc.nextInt());
+			} else {
+				
+			}
+		}
+		return 0;
+	}
+}

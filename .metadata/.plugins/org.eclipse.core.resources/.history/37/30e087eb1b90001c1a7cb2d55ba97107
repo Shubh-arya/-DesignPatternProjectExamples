@@ -1,0 +1,46 @@
+package data_strucuture_and_algorithms.sort;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class FindDisappereardNumbers {
+	public static void main(String[] args) {
+		int[] arr = { 2, 3, 5, 6, 9 };
+		System.out.println(Arrays.toString(cyclicSort(arr)));
+		System.out.println(findMissingNumber(arr));
+	}
+
+	private static List<Integer> findMissingNumber(int[] arr) {
+		List<Integer> missing = new ArrayList<Integer>();
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] != i) {
+				missing.add(i);
+			}
+		}
+
+		if(arr[arr.length-1] != arr.length) {
+			missing.add(arr.length);
+		}
+		return missing;
+	}
+
+	private static int[] cyclicSort(int[] arr) {
+		int index = 0;
+		while (index < arr.length) {
+			int correct = arr[index] -1;
+			if (arr[index] < arr.length && arr[index] - 1  != index) {
+				swap(arr, index);
+			} else {
+				index++;
+			}
+		}
+		return arr;
+	}
+	
+	private static void swap(int[] arr, int source, int target) {
+		int tmp = arr[source];
+		arr[source] = arr[target];
+		arr[target] = tmp;
+	}
+}

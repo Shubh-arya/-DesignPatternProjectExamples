@@ -1,0 +1,44 @@
+package data_strucuture_and_algorithms.binarysearch;
+
+public class RotatedBinarySearch {
+	public static void main(String[] args) {
+		int[] arr = { 3, 4, 5, 7, 0, 1, 2 };
+		
+		System.out.println(findPivot(arr));
+
+	}
+
+	static int findPivot(int[] arr) {
+		int start = 0;
+		int end = arr.length - 1;
+
+		while (start <= end) {
+			int mid = start + (end - start) / 2;
+
+			// case 1 : if the mid > mid + 1, it is the pivot
+
+			if (arr[mid] > arr[mid + 1]) {
+				return mid;
+			}
+
+			// case 2 : if the mid < mid -1
+			if (arr[mid] < arr[mid - 1]) {
+				return mid - 1;
+			}
+
+			// case 3 : if the start is greater than mid, meaning we are in decreasing
+			// array, so pivot will be on left.
+			if (arr[start] > arr[mid]) {
+				end = mid - 1;
+			}
+
+			// case 4: if the start is less the mid, meaning we are in incrasing order
+			// sorted array, so pivot will be on right.
+
+			if (arr[start] < arr[mid]) {
+				start = mid + 1;
+			}
+		}
+		return -1;
+	}
+}

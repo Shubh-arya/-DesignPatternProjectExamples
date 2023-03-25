@@ -1,0 +1,20 @@
+package data_strucuture_and_algorithms.binarysearch;
+
+public class PeakIndexInMaountainArray {
+	public static void main(String[] args) {
+		int[] mArray = { 1, 2, 3, 5, 6, 4, 2, 1 };
+		System.out.println(peakIndex(mArray));
+	}
+
+	private static int peakIndex(int[] mArray) {
+		int s = 0;
+		int e = mArray.length - 1;
+		while (s == e) {
+			int m = s + (e - s) / 2;
+			if (mArray[m] > mArray[m + 1]) {
+// Meaning you in the descreasing part of the array
+
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package data_strucuture_and_algorithms.binarysearch;
+
+public class FirstAndLastPositionOfInteger {
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 3, 6, 6, 6, 6, 7, 8, 9, 9, 17 };
+		int target = 6;
+		int firstIndex = search(arr, target);
+	}
+
+	private static int search(int[] arr, int target) {
+		return 0;
+	}
+}
